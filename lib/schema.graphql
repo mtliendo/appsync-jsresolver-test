@@ -1,0 +1,18 @@
+type Query {
+	getTodo(id: ID!): Todo @aws_api_key
+}
+
+type Mutation {
+	createTodo(input: TodoInput): Todo @aws_api_key
+}
+
+type Todo {
+	id: ID!
+	name: String
+	description: String
+}
+
+input TodoInput {
+	name: String
+	description: String
+}
